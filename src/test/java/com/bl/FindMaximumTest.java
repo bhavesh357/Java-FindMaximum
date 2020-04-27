@@ -25,4 +25,9 @@ public class FindMaximumTest {
         Assert.assertEquals(2.3f,max,0.0002);
     }
 
+    @Test
+    public void whenGivenThreeStrings_ShouldReturnMaximum() {
+        String max = findMaximum.getMaximum(new String[]{"Hello","abc","xyz"});
+        Assert.assertEquals("xyz",max);
+    }
 }
