@@ -31,4 +31,9 @@ public class FindMaximumTest {
         Assert.assertEquals("xyz",max);
     }
 
+    @Test
+    public void givenThreeGenericArray_ShouldRunProperly() {
+        FindMaximum<Integer, Float, String> findMaximum = new FindMaximum<Integer, Float, String>(new Integer[]{2, 4, 6}, new Float[]{1.2f, 2.3f, 0.6f}, new String[]{"Hello", "abc", "xyz"});
+        findMaximum.testMaximum();
+    }
 }
