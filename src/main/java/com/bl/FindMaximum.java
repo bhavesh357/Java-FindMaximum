@@ -1,7 +1,21 @@
 package com.bl;
 
-public class FindMaximum {
+public class FindMaximum<E> {
+    public E[] array;
 
+    public FindMaximum() {
+    }
+
+    public static <E extends Comparable> E getMaximum(E[] array){
+        E max = array[0];
+        for(int i=1;i<array.length;i++){
+            if(array[i].compareTo(max)>0){
+                max=array[i];
+            }
+        }
+        return max;
+    }
+    /*
     public Integer getMaximum(Integer[] array){
         Integer max = array[0];
         for(int i=1;i<array.length;i++){
@@ -31,4 +45,6 @@ public class FindMaximum {
         }
         return max;
     }
+
+     */
 }

@@ -30,4 +30,5 @@ public class FindMaximumTest {
         String max = findMaximum.getMaximum(new String[]{"Hello","abc","xyz"});
         Assert.assertEquals("xyz",max);
     }
+
 }
