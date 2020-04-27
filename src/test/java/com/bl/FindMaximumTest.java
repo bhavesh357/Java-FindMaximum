@@ -18,4 +18,11 @@ public class FindMaximumTest {
         Integer max=findMaximum.getMaximum(new Integer[]{2,4,6});
         Assert.assertSame(6,max);
     }
+
+    @Test
+    public void whenGivenThreeFloat_ShouldReturnMaximum() {
+        Float max = findMaximum.getMaximum(new Float[]{1.2f,2.3f,0.6f});
+        Assert.assertEquals(2.3f,max,0.0002);
+    }
+
 }
