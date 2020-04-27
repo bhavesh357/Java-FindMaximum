@@ -16,9 +16,9 @@ public class FindMaximum<X extends Comparable,Y extends Comparable,Z extends Com
     }
 
     public <E extends Comparable> void testMaximum(){
-        getMaximum(array1);
-        getMaximum(array2);
-        getMaximum(array3);
+        printMax(getMaximum(array1));
+        printMax(getMaximum(array2));
+        printMax(getMaximum(array3));
     }
 
     public static <E extends Comparable> E getMaximum(E[] array){
@@ -29,6 +29,10 @@ public class FindMaximum<X extends Comparable,Y extends Comparable,Z extends Com
             }
         }
         return max;
+    }
+
+    public <E> void printMax(E e){
+        System.out.println(e);
     }
     /*
     public Integer getMaximum(Integer[] array){
