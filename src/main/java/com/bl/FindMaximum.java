@@ -1,32 +1,31 @@
 package com.bl;
 
-public class FindMaximum<X extends Comparable,Y extends Comparable,Z extends Comparable> {
-    public X[] array1;
-    public Y[] array2;
-    public Z[] array3;
+public class FindMaximum<E extends Comparable> {
+    public E e1;
+    public E e2;
+    public E e3;
 
     public FindMaximum() {
 
     }
 
-    public FindMaximum(X[] array1, Y[] array2, Z[] array3) {
-        this.array1 = array1;
-        this.array2 = array2;
-        this.array3 = array3;
+    public FindMaximum(E x1,E x2,E x3) {
+        this.e1= x1;
+        this.e2= x2;
+        this.e3= x3;
     }
 
     public <E extends Comparable> void testMaximum(){
-        printMax(getMaximum(array1));
-        printMax(getMaximum(array2));
-        printMax(getMaximum(array3));
+        printMax(getMaximum(e1,e2,e3));
     }
 
-    public static <E extends Comparable> E getMaximum(E[] array){
-        E max = array[0];
-        for(int i=1;i<array.length;i++){
-            if(array[i].compareTo(max)>0){
-                max=array[i];
-            }
+    public static <E extends Comparable> E getMaximum(E e1,E e2,E e3){
+        E max = e1;
+        if(e2.compareTo(e3)>= 0 && e2.compareTo(e1)>=0){
+            max = e2;
+        }
+        if(e3.compareTo(e1)>= 0 && e3.compareTo(e2)>=0){
+            max = e3;
         }
         return max;
     }
