@@ -19,13 +19,12 @@ public class FindMaximum<E extends Comparable> {
         printMax(getMaximum(e1,e2,e3));
     }
 
-    public static <E extends Comparable> E getMaximum(E e1,E e2,E e3){
-        E max = e1;
-        if(e2.compareTo(e3)>= 0 && e2.compareTo(e1)>=0){
-            max = e2;
-        }
-        if(e3.compareTo(e1)>= 0 && e3.compareTo(e2)>=0){
-            max = e3;
+    public static <E extends Comparable> E getMaximum(E... eArray){
+        E max = eArray[0];
+        for(E e:eArray){
+            if(e.compareTo(max)>0){
+                max=e;
+            }
         }
         return max;
     }
